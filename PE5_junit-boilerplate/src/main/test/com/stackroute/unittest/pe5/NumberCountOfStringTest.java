@@ -9,12 +9,13 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
-public class CountStringFrequencyTest {
+public class NumberCountOfStringTest {
 
-    CountStringFrequency obj;
+    NumberCountOfString obj;
+
     @Before
     public void setUp() throws Exception {
-        obj = new CountStringFrequency();
+        obj = new NumberCountOfString();
 
     }
 
@@ -24,31 +25,21 @@ public class CountStringFrequencyTest {
     }
 
     @Test
-    public void countFreqOfWords() {
+    public void CountWordFrequency() {
         String  str = "one one -one___two,,three,one @three*one?two";
         Map<String,Integer> freq=new HashMap<String, Integer>();
         freq.put("one",5);
         freq.put("two",2);
         freq.put("three",2);
-        assertEquals(freq,obj.CountFreqOfWords(str));
+        assertEquals(freq,obj.CountWordFrequency(str));
     }
     @Test
-    public void countFreqOfWords1() {
+    public void CountWordFrequency1() {
         String str = "one one -one___two,,three,one @three*one?two";
         Map<String, Integer> freq = new HashMap<String, Integer>();
         freq.put("1", 5);
         freq.put("two", 2);
         freq.put("three", 2);
-        assertNotEquals(freq, obj.CountFreqOfWords(str));
+        assertNotEquals(freq, obj.CountWordFrequency(str));
     }
-    @Test
-    public void countFreqOfWords2() {
-        String str = "one one -one___two,,three,one @three*one?two";
-        Map<String, Integer> freq = new HashMap<String, Integer>();
-        freq.put("1", 5);
-        freq.put("two", 2);
-        freq.put("three", 2);
-        assertEquals(freq, obj.CountFreqOfWords(str));
-    }
-
 }

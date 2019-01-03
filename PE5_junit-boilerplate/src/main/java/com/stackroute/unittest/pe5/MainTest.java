@@ -5,18 +5,18 @@ import java.util.Collections;
 import java.util.List;
 
 public class MainTest {
-    public List<Student> studentInfo() {
-        Student obj1 = new Student(1, "Swetha", 22);
-        Student obj2 = new Student(3, "Sonu", 24);
-        Student obj3 = new Student(2, "Bhanu", 20);
-        Student obj4 = new Student(4, "Evangeline", 10);
-        Student obj5 = new Student(5, "Jaanu", 22);
+    public List <Student> studentInfo() {
+        Student obj name1 = new Student(1, "Anu", 22);        // creating 5 objects of student in class Maintest
+        Student obj name2 = new Student(3, "Vaibhav", 24);
+        Student obj name3 = new Student(2, "Anjali", 20);
+        Student obj name4 = new Student(4, "Abhishek", 10);
+        Student obj name5 = new Student(5, "Ishu", 22);
         List<Student> list = new ArrayList<Student>();
-        list.add(obj1);
-        list.add(obj2);
-        list.add(obj3);
-        list.add(obj4);
-        list.add(obj5);
+        list.add(obj name1);
+        list.add(obj name2);
+        list.add(obj name3);
+        list.add(obj name4);
+        list.add(obj name5);
         System.out.println(list);
 
         Collections.sort(list, new StudentSorter());

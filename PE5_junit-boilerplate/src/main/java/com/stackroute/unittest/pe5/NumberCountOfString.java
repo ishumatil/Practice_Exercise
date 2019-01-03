@@ -5,16 +5,9 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/*
-    Write a program to find the number of counts in the following String . Store the output in
-    Map< String ,Integer> as key value pair.
-    Input : String str = “one one -one___two,,three,one @three*one?two”;
-    Output : {"one":5 , "two":2, "three" :2}
+public class NumberCountOfString {
+    public Map<String,Integer> CountWordFrequency(String match){
 
- */
-public class CountStringFrequency {
-    public Map<String,Integer> CountFreqOfWords(String match){
-        //    str = "one one -one___two,,three,one @three*one?two";
         String strRegexOne="one";
         String strRegexTwo="two";
         String strRegexThree="three";
@@ -23,8 +16,8 @@ public class CountStringFrequency {
         Pattern pattern2=Pattern.compile(strRegexTwo);
         Pattern pattern3=Pattern.compile(strRegexThree);
 
-        Matcher match1=pattern1.matcher(match);
-        Matcher match2=pattern2.matcher(match);
+        Matcher match1=pattern1.matcher(match);       // will match the above mentioned three
+        Matcher match2=pattern2.matcher(match);          // patterns in the string
         Matcher match3=pattern3.matcher(match);
 
         int count1=0;
@@ -46,9 +39,9 @@ public class CountStringFrequency {
             count3++;
         }
         System.out.println(count3);
-        Map<String,Integer> frequency=new HashMap<String, Integer>();// creating a Map with Key as String, and Value as Integer
+        Map<String,Integer> frequency=new HashMap<String, Integer>();// create a map with given values
         frequency.put("one",count1);
-        frequency.put("two",count2);
+        frequency.put("two",count2);           // put frequency as it got after matching the string
         frequency.put("three",count3);
         System.out.println(frequency);
         return frequency;

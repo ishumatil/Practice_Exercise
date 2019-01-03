@@ -9,12 +9,12 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
-public class ModifyKeyValueTest {
+public class ModifyMapKeyValueTest {
 
-    ModifyKeyValue obj;
+    ModifyMapKeyValue obj;
     @Before
     public void setUp() throws Exception {
-        obj = new ModifyKeyValue();
+        obj = new ModifyMapKeyValue();
     }
 
     @After
@@ -23,27 +23,27 @@ public class ModifyKeyValueTest {
     }
 
     @Test
-    public void modifyKeyValueInMap() {
-        Map<String,String> input=new HashMap<String, String>();
+    public void ModifyMapKeyValue() {
+        Map<String,String> input = new HashMap<String, String>();
         input.put("value1","mars");
         input.put("value2","saturn");
         System.out.println(input);
-        Map<String,String> result=new HashMap<String, String>();
+        Map<String,String> result = new HashMap<String, String>();
         result.put("value1"," ");
         result.put("value2","mars");
         System.out.println(result);
-        assertEquals(result,obj.modifyKeyValueInMap(input));
+        assertEquals(result,obj.ModifyMapKeyValue(input));
     }
     @Test
-    public void modifyKeyValueInMap1() {
-        Map<String,String> input=new HashMap<String, String>();
+    public void ModifyMapKeyValue1() {
+        Map<String,String> input = new HashMap<String, String>();
         input.put("value1","JAVA");
         input.put("value2","C++");
         System.out.println(input);
-        Map<String,String> result=new HashMap<String, String>();
+        Map<String,String> result = new HashMap<String, String>();
         result.put("value1"," ");
-        result.put("value2","mars");
+        result.put("value2","JAVA");
         System.out.println(result);
-        assertEquals(result,obj.modifyKeyValueInMap(input));
+        assertEquals(result,obj.ModifyMapKeyValue(input));
     }
 }
